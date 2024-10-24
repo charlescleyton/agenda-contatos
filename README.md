@@ -49,7 +49,8 @@ docker-compose up --build -d
 Dentro do container `app`, instale as dependências do Laravel:
 
 ```bash
-docker-compose exec app composer install
+docker-compose exec laravel bash 
+composer install
 ```
 
 ### 5. Gerar a Chave da Aplicação
@@ -57,7 +58,7 @@ docker-compose exec app composer install
 Execute o seguinte comando para gerar a chave da aplicação Laravel:
 
 ```bash
-docker-compose exec app php artisan key:generate
+php artisan key:generate
 ```
 
 ### 6. Rodar as Migrações
@@ -65,7 +66,7 @@ docker-compose exec app php artisan key:generate
 Execute as migrações para criar as tabelas no banco de dados:
 
 ```bash
-docker-compose exec app php artisan migrate
+php artisan migrate
 ```
 
 ### 7. Populando o Banco de Dados (Opcional)
@@ -73,7 +74,7 @@ docker-compose exec app php artisan migrate
 Você pode usar o Seeder para popular o banco de dados com dados falsos:
 
 ```bash
-docker-compose exec app php artisan db:seed
+php artisan db:seed
 ```
 
 ## Endpoints da API

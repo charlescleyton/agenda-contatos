@@ -61,7 +61,16 @@ Execute o seguinte comando para gerar a chave da aplicação Laravel:
 php artisan key:generate
 ```
 
-### 6. Rodar as Migrações
+### 6. Apagar cache
+
+Execute o seguinte comando para cache que por ventura possam impedir a execução da aplicação:
+
+```bash
+php artisan config:cache
+php artisan config:clear
+```
+
+### 7. Rodar as Migrações
 
 Execute as migrações para criar as tabelas no banco de dados:
 
@@ -69,7 +78,7 @@ Execute as migrações para criar as tabelas no banco de dados:
 php artisan migrate
 ```
 
-### 7. Populando o Banco de Dados (Opcional)
+### 8. Populando o Banco de Dados (Opcional)
 
 Você pode usar o Seeder para popular o banco de dados com dados falsos:
 
